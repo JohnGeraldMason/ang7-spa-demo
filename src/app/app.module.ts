@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SingupComponent } from './auth/singup/singup.component';
+import { SigninComponent } from './auth/signin/signin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    SingupComponent
+    SingupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule
