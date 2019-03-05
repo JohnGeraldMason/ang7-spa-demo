@@ -6,19 +6,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
-import { AppRoutingComponent } from './app-routing/app-routing.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SigninComponent,
-    SignupComponent,
-    AppRoutingComponent
+    SignupComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
