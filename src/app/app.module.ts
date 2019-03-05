@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { SigninComponent } from './auth/signin/signin.component';
 import { SignupComponent } from './auth/signup/signup.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { AppRoutingModule } from './app-routing.module';
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
