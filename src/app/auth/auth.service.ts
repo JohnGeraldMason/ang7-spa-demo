@@ -18,4 +18,8 @@ export class AuthService {
                 error => console.log(error) // TODO: display error message to user
             );
     }
+
+    getToken() {
+        return firebase.auth().currentUser.getIdToken();
+    }
 }
