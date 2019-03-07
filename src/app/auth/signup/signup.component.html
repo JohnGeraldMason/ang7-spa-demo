@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <h2>Signup</h2>
+    <h2>This is the Registration Page</h2>
+    <p>New users may create an account here. This username and password data is stored in a Firebace baskend.</p>
     <form (ngSubmit)="onSignup(f)" #f="ngForm">
       <div class="form-group">
         <label for="email">Mail</label>
@@ -17,5 +18,7 @@
       </div>
       <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign Up</button>
     </form>
+    <hr>
+    <div class="alert alert-danger" role="alert">TODO: Output user feedback regarding success/failure of registration.</div>
   </div>
 </div>
