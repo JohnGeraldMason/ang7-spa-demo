@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
+import { DataStorageService } from '../shared/data-storage.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,12 @@ import { AuthService } from '../auth/auth.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private authService: AuthService) { }
+  constructor(private dataStorageService: DataStorageService, private authService: AuthService) { }
 
   ngOnInit() {
   }
 
+  isAuthenticated() {
+    return this.authService.isAuthenticated();
+  }
 }
