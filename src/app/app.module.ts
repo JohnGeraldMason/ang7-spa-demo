@@ -10,6 +10,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './auth/auth.service';
 import { HttpModule } from '@angular/http';
+import { DataStorageService } from './shared/data-storage.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { HttpModule } from '@angular/http';
     AppRoutingModule,
     HttpModule
   ],
-  providers: [AuthService],
+  providers: [DataStorageService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
