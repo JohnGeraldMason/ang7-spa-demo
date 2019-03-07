@@ -1,6 +1,7 @@
 <div class="row">
   <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-    <h2>Signin</h2>
+    <h2>This is the Login Page</h2>
+    <p>Users that have registered an account may login here. Authentication via Firebase backend will occur upon submission.</p>
     <form (ngSubmit)="onSignin(f)" #f="ngForm">
       <div class="form-group">
         <label for="email">Mail</label>
@@ -15,7 +16,9 @@
           ngModel
           class="form-control">
       </div>
-      <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign In</button>
+      <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Login</button>
+      <hr>
+      <div class="alert alert-danger" role="alert">TODO: Output user feedback regarding failure of login.</div>
     </form>
   </div>
 </div>
