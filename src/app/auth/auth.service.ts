@@ -10,6 +10,16 @@ export class AuthService {
 
     signupUser(email: string, password: string) {
         firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then(
+                //response => console.log(response)
+                response => {
+                    this.router.navigate(['/']);
+                    firebase.auth().currentUser.getIdToken()
+                    .then(
+                    (token: string) => this.token = token
+                    )
+                }
+            )
             .catch(
                 error => console.log(error) // TODO: display error message to user
             )
