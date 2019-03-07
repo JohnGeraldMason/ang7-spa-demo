@@ -18,7 +18,9 @@
       </div>
       <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Login</button>
       <hr>
-      <div class="alert alert-danger" role="alert">TODO: Output user feedback regarding failure of login.</div>
+      <ng-template [ngIf]="isAuthErrorMessage()">
+        <div class="alert alert-danger" role="alert">{{isAuthErrorMessage()}}</div>
+      </ng-template>  
     </form>
   </div>
 </div>
