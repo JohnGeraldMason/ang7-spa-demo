@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthService {
     token: string;
+    authErrorMessage: string;
+    
 
     constructor(private router: Router) {}
 
@@ -16,14 +18,13 @@ export class AuthService {
                     this.router.navigate(['/']);
                     firebase.auth().currentUser.getIdToken()
                     .then(
-                    (token: string) => this.token = token
+                        (token: string) => this.token = token
                     )
                 }
             )
-            .catch(
-                error => console.log(error) // TODO: display error message to user
+            .catch(          
+                error =>  this.authErrorMessage = error          
             )
-            
     }
 
     signinUser(email: string, password: string) {
@@ -39,8 +40,8 @@ export class AuthService {
                 }
             )
             .catch(
-                error => console.log(error) // TODO: display error message to user
-            );
+                error =>  this.authErrorMessage = error
+            );        
     }
 
     getToken() {
@@ -50,6 +51,11 @@ export class AuthService {
           );
         return this.token;
       }
+
+    isAuthErrorMessage() {
+        //alert("error: " + this.authErrorMessage);
+        return this.authErrorMessage;
+    }
 
     isAuthenticated() { 
         return this.token != null;
