@@ -1,6 +1,6 @@
 # Ang7SpaDemo
 
-#### http://spa-demo-for-ang-7.s3-website.ca-central-1.amazonaws.com
+#### Click here for a live demo: http://spa-demo-for-ang-7.s3-website.ca-central-1.amazonaws.com
 
 ![image](https://user-images.githubusercontent.com/2049888/54093446-ba299500-4376-11e9-848a-28e7fe847f40.png)
 
